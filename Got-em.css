@@ -1,0 +1,17 @@
+#Main-div {
+  border: solid 10px black;
+  border-radius: 10px;
+  padding: 20px;
+  background: linear-gradient(90deg, gold, rgb(255, 145, 0));
+}
+
+.Image {
+  border: solid 10px black;
+  border-radius: 10px;
+}
+
+.Image:hover {
+  border: solid 10px black;
+  border-radius: 10px;
+  filter: saturate(300%) brightness(125%) contrast(80%);
+}

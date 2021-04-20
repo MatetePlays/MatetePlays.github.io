@@ -1,0 +1,135 @@
+h1 {
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
+.Free-VBUX {
+  border: solid 10px purple;
+  border-radius: 10px;
+}
+
+img {
+  border: solid 10px black;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.Sidebar {
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+  border: solid 10px black;
+  background: linear-gradient(orange, rgb(255, 80, 0));
+}
+
+.Cool-Div {
+  border: solid 10px black;
+  border-radius: 10px;
+  padding: 10px;
+  margin-left: 180px;
+  background: linear-gradient(90deg, gold, rgb(255, 145, 0));
+}
+
+.Main-div {
+  border: solid 10px black;
+  border-radius: 10px;
+  padding: 20px;
+  margin-left: 180px;
+  background: linear-gradient(90deg, gold, rgb(255, 145, 0));
+}
+
+.Second-div {
+  border: solid 10px black;
+  border-radius: 10px;
+  padding: 20px;
+  margin-left: 180px;
+  background: linear-gradient(90deg, gold, rgb(255, 145, 0));
+}
+
+.Date_Button {
+  border: solid 5px black;
+  border-radius: 10px;
+  background-color: #f88d15;
+}
+
+.Date_Text {
+  font-size: 20px;
+}
+
+.Upside_Down_Text {
+  font-size: 36px;
+  color: rgb(255, 0, 0);
+  transform: rotate(180deg);
+  border: solid 10px rgb(255, 0, 0);
+  border-radius: 10px;
+  filter: blur(3px) opacity(60%);
+}
+
+.Cool {
+  margin: 20px;
+}
+
+.Image:hover {
+  filter: saturate(300%) brightness(125%) contrast(80%);
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
+  border: solid 10px black;
+  border-radius: 10px;
+  padding: 20px;
+  margin-left: 180px;
+  background: linear-gradient(90deg, gold, rgb(255, 145, 0));
+}
+
+.item {
+  flex-basis: auto;
+  flex-grow: 0;
+  flex-shrink: 1;
+  border: 5px solid black;
+  margin: 10px;
+  font-size: 36px;
+}
+
+.Grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: solid 10px black;
+  border-radius: 10px;
+  padding: 20px;
+  margin-left: 180px;
+  background: linear-gradient(90deg, gold, rgb(255, 145, 0));
+}
+
+.Grid-item {
+  background-color: orange;
+  border: solid 5px black;
+  border-radius: 10px;
+  margin: 10px;
+  font-size: 36px;
+}
+
+.About-page-link {
+  color: black;
+  text-decoration: none;
+  font-size: 36px;
+}
+
+.About-page-link:hover {
+  color: white;
+  text-decoration: none;
+  font-size: 36px;
+}

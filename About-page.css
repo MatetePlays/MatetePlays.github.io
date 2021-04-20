@@ -1,0 +1,35 @@
+body {
+  background-color: #f88d15;
+}
+
+#About {
+  font-size: 100px;
+  font-family: "Bebas Neue";
+}
+
+#Main-Div {
+  border: solid 10px black;
+  border-radius: 10px;
+  padding: 20px;
+  background: linear-gradient(90deg, gold, rgb(255, 145, 0));
+}
+
+#About-Paragraph {
+  text-align: center;
+  font-size: 50px;
+}
+
+#Logo {
+  border: solid 10px black;
+  border-radius: 10px;
+}
+
+#Logo:hover {
+  border: solid 10px black;
+  border-radius: 10px;
+  filter: saturate(300%) brightness(125%) contrast(80%);
+}
+
+#Homepage {
+  font-size: 40px;
+}
