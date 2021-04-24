@@ -8,8 +8,12 @@
         <meta name="description" content="This is just a random 'meme' website.">
         <link rel="stylesheet" href="index.css">
         <link rel="icon" href="/favicon.ico" type="image/x-icon">
+        <script src="https://cdn.jsdelivr.net/npm/brython@3.9.0/brython.min.js">
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/brython@3.9.0/brython_stdlib.js">
+        </script>
     </head>
-    <body style="background-color: #F88D15;">
+    <body style="background-color: #F88D15;" onload="brython();">
         <div class="Sidebar">
             <p><a href="\About/About-page.html" class="About-page-link">About</a></p>
         </div>
@@ -21,7 +25,7 @@
         <div style="background-color:rgb(255, 183, 0);" class="Main-div">
             <p style="font-size:36px; color: black"><em>This is my first website.</em><br> 
                 WOW THATS COOL.<br>
-                YAY. PYTHON (Not really in this website but anyway...), HTML/CSS AND JAVASCRIPT!!!!!<br>
+                YAY. PYTHON, HTML/CSS AND JAVASCRIPT!!!!!<br>
                 <strong>LESS GOOOOOOO</strong>
                 <br>
                 <strong>Sheeeeeeeeeeeeeeeeeeeeeeeeeeeeshhhhhh</strong>
@@ -60,15 +64,28 @@
                 <input type = "color">
                 <input type = "range">
             </center>
-            <ol>
+            <br>
+            <p class="Button-Written">
+                This button's event is written in Python.
+            </p>
+            <center>
+            <button id="Cool-Button">
+                Cool
+            </button>
+            <p id="My-Brudda"></p>
+            </center>
+            <ol class="List">
                 <li>Enea is a Legend</li>
                 <li>Cool</li>
             </ol>
-            <ul>
+            <ul class="List">
                 <li>Lol</li>
                 <li>Don't know what to put here</li>
             </ul>
             <br>
+            <p class="Button-Written">
+                This button's event is written in JavaScript.
+            </p>
             <center><button type="button" onclick="document.getElementById('demo').innerHTML = Date()" class="Date_Button">
                 Click me to display Date and Time.</button>
             </center>
@@ -102,5 +119,6 @@
             <div class="Grid-item">Enea Pro</div>
         </div>
         <script src="\index/index.js"></script>
+        <script type="text/python" src="index.py"></script>
     </body>
 </html>

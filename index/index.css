@@ -58,10 +58,11 @@ img {
   border: solid 5px black;
   border-radius: 10px;
   background-color: #f88d15;
+  font-size: 20px;
 }
 
 .Date_Text {
-  font-size: 20px;
+  font-size: 30px;
 }
 
 .Upside_Down_Text {
@@ -135,5 +136,25 @@ img {
 }
 
 #No-Fortnite {
+  font-size: 22px;
+}
+
+#Cool-Button {
+  font-size: 36px;
+  background-color: black;
+  color: white;
+  border: solid 8px black;
+  border-radius: 10px;
+}
+
+#My-Brudda {
+  font-size: 36px;
+}
+
+.Button-Written {
+  font-size: 32px;
+}
+
+.List {
   font-size: 22px;
 }
