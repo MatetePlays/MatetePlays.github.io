@@ -1,3 +1,7 @@
+body {
+  background: linear-gradient(90deg, gold, rgb(255, 145, 0));
+}
+
 h1 {
   text-align: center;
 }
@@ -6,51 +10,37 @@ p {
   text-align: center;
 }
 
-.Free-VBUX {
-  border: solid 10px purple;
-  border-radius: 10px;
-}
-
 img {
   border: solid 10px black;
   border-radius: 10px;
   text-decoration: none;
 }
 
-.Sidebar {
-  height: 100%;
-  width: 160px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  overflow-x: hidden;
-  padding-top: 20px;
-  border: solid 10px black;
-  background: linear-gradient(orange, rgb(255, 80, 0));
+.Navbar {
+  width: 100%;
+  height: 15vh;
+  margin: auto;
+  display: flex;
+  align-items: center;
 }
 
-.Cool-Div {
-  border: solid 10px black;
-  border-radius: 10px;
-  padding: 10px;
-  margin-left: 180px;
-  background: linear-gradient(90deg, gold, rgb(255, 145, 0));
+nav {
+  flex: 1;
+  padding-left: 60px;
+}
+
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 0px 20px;
 }
 
 .Main-div {
-  border: solid 10px black;
-  border-radius: 10px;
   padding: 20px;
-  margin-left: 180px;
   background: linear-gradient(90deg, gold, rgb(255, 145, 0));
 }
 
 .Second-div {
-  border: solid 10px black;
-  border-radius: 10px;
-  padding: 20px;
-  margin-left: 180px;
   background: linear-gradient(90deg, gold, rgb(255, 145, 0));
 }
 
@@ -76,7 +66,9 @@ img {
 }
 
 #Cool-Website {
-  margin: 20px;
+  font-size: 64px;
+  margin-left: 35px;
+  cursor: pointer;
 }
 
 .Image:hover {
@@ -93,7 +85,6 @@ img {
   border: solid 10px black;
   border-radius: 10px;
   padding: 20px;
-  margin-left: 180px;
   background: linear-gradient(90deg, gold, rgb(255, 145, 0));
 }
 
@@ -112,7 +103,6 @@ img {
   border: solid 10px black;
   border-radius: 10px;
   padding: 20px;
-  margin-left: 180px;
   background: linear-gradient(90deg, gold, rgb(255, 145, 0));
 }
 
@@ -124,13 +114,13 @@ img {
   font-size: 36px;
 }
 
-.About-page-link {
+.Links {
   color: black;
   text-decoration: none;
   font-size: 36px;
 }
 
-.About-page-link:hover {
+.Links:hover {
   color: white;
   text-decoration: none;
   font-size: 36px;
@@ -165,11 +155,11 @@ img {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(59, 59, 59, 0.7);
+  background: rgba(24, 24, 24, 0.7);
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(34, 34, 34, 0.7);
+  background: rgba(0, 0, 0, 0.7);
   border-radius: 10px;
 }
