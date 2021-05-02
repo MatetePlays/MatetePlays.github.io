@@ -1,4 +1,4 @@
-# "Meme Website"
+# "Cool Website"
 
-This is just an experimental 'meme' website.
+This is just a random website that im developing for fun.
 Link: https://mateteplays.github.io
