@@ -1,3 +1,11 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-weight: normal;
+}
+
 body {
   background: linear-gradient(90deg, gold, rgb(255, 145, 0));
 }
@@ -69,6 +77,9 @@ nav ul li {
   font-size: 64px;
   margin-left: 35px;
   cursor: pointer;
+  color: black;
+  font-family: "Bebas Neue";
+  text-decoration: none;
 }
 
 .Image:hover {
