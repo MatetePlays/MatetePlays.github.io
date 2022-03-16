@@ -1,4 +1,4 @@
-from browser import document, console, alert
+from browser import document, console
 
 def show(e):
     document['My-Brudda'] <= 'Hi there! '
