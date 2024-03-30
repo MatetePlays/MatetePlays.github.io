@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}YouTube Video Downloader - MatetePlays' Website{% endblock %}
+
+{% block content %}
+<div class="container mx-auto py-20 px-4">
+    <h1 class="text-7xl font-bold text-center mb-10">YouTube Video Downloader</h1>
+    <br>
+    <img src="https://t3.ftcdn.net/jpg/04/74/05/94/360_F_474059464_qldYuzxaUWEwNTtYBJ44VN89ARuFktHW.jpg" alt="Error" width="250" height="250" class="mx-auto block rounded-lg border-4 border-black hover:scale-110 transition-transform duration-300">
+    <br>
+    <noscript><h2 class="text-5xl font-bold text-center mb-16 mt-4">Please enable JavaScript to use the YT Downloader.</h2></noscript>
+    <div class="max-w-3xl mx-auto flex flex-col items-center justify-center">
+        <label for="video_url" class="block font-bold text-lg mb-2">Press the download button again after the progress bar reaches 100%.</label>
+        <label for="video_url" class="block font-bold text-lg mb-2">Click Refresh if you want to use another format for the already once downloaded video.</label>
+        <label for="video_url" class="block text-4xl my-2">YouTube Video URL:</label>
+        <br>
+        <div class="flex items-center justify-center mb-4">
+            <input type="text" id="video_url" name="url" class="min-w-full px-4 py-2 mx-2 border rounded-md focus:outline-none focus:border-blue-500 hover:scale-105 transition-transform duration-300" required>
+            <button id="refresh_button" class="ml-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 mx-2 rounded hover:scale-110 transition-transform duration-300">Refresh</button>
+        </div>
+        <div class="flex items-center justify-center pt-5">
+            <iframe id="loader_to_iframe" class="hover:scale-105 transition-transform duration-300" style="min-width: 800px; min-height: 300px; border: 0; overflow: hidden;" scrolling="no" src="" sandbox="allow-downloads allow-same-origin allow-scripts allow-forms"></iframe>
+        </div>
+        <!-- JavaScript to update the iframe URL. -->
+        <script type="text/javascript" src="{% static 'main/yt-downloader/yt-downloader.js' %}"></script>
+    </div>
+</div>
+{% endblock %}

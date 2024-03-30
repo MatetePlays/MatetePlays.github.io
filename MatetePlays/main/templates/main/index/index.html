@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<script src="{% static 'main/index/index.js' %}" type="module" async></script>
+{% endblock %}
+
+{% block content %}
+<h1 class="text-7xl text-black text-center my-8">MatetePlays' Personal Website</h1>
+<p class="text-5xl text-black text-center my-12">Welcome to my website!</p>
+<p class="text-3xl text-black text-center mt-12 mb-6">Current local time:</p>
+<p id="date" class="text-2xl text-black text-center"></p>
+<p class="text-3xl text-black text-center mt-12 mb-6">Current UTC time:</p>
+<p id="date_utc" class="text-2xl text-black text-center"></p>
+<p class="text-3xl text-black text-center mt-12 mb-6">Current UNIX time:</p>
+<p id="date_ms" class="text-2xl text-black text-center mb-12"></p>
+<!-- Section for showcasing projects -->
+<div class="container mx-auto">
+    <h2 class="text-4xl font-bold text-center mb-8">My Projects</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {% for repository in repositories %}
+        <div class="bg-white rounded-lg shadow-lg p-8 hover:scale-105 transition-transform duration-300">
+            <!-- Use GitHub social preview image URL -->
+            <img src="{{ repository.owner.avatar_url }}" alt="{{ repository.name }}" class="w-full h-auto mb-4 rounded-lg">
+            <h3 class="text-xl font-semibold mb-2">{{ repository.name }}</h3>
+            <p class="text-lg mb-4">{{ repository.description }}</p>
+            <a href="{{ repository.html_url }}" class="block text-blue-600 hover:underline">View Project</a>
+            <div class="flex items-center mt-4">
+                <img src="https://pngimg.com/uploads/github/github_PNG40.png" alt="GitHub Logo" class="w-8 h-8 mr-2">
+                <a href="{{ repository.html_url }}" class="text-gray-600 hover:text-blue-600 hover:underline">GitHub</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
