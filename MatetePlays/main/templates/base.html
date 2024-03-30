@@ -15,22 +15,29 @@
     {% endblock %}
 </head>
 <body {% if request.resolver_match.url_name == 'about' %}style="background-color: #1d4ed8;" class="bg-gradient-to-r from-blue-500 to-blue-700"{% elif request.resolver_match.url_name == 'calculator' %}style="background-color: #ca8a04;" class="bg-gradient-to-r from-yellow-500 to-yellow-600"{% elif request.resolver_match.url_name == 'yt-downloader' %}style="background-color: #dc2626;" class="bg-gradient-to-r from-red-500 to-red-600"{% else %}style="background-color: #f97316;" class="bg-gradient-to-r from-yellow-500 to-orange-500"{% endif %} class="min-h-screen flex flex-col">
-    <nav class="flex items-center justify-between bg-gradient-to-r fixed w-full z-10 backdrop-filter backdrop-blur-lg py-8" {% if request.resolver_match.url_name == 'about' %}style="background-color: #1d4ed8;"{% elif request.resolver_match.url_name == 'calculator' %}style="background-color: #ca8a04;"{% elif request.resolver_match.url_name == 'yt-downloader' %}style="background-color: #dc2626;"{% else %}style="background-color: #f97316;"{% endif %}>
-        <a href="{% url 'index' %}" title="Cool Website" class="text-7xl font-bold text-black px-16 hover:scale-110 transition-transform duration-300">MatetePlays</a>
-        <ul class="flex space-x-6 px-16">
-            <li class="hover:scale-110 transition-transform duration-300"><a href="{% url 'index' %}" class="text-4xl font-medium text-black">Home</a></li>
+    <nav id="navbar" class="flex items-center justify-between bg-gradient-to-r w-full z-10 backdrop-filter backdrop-blur-lg py-8" {% if request.resolver_match.url_name == 'about' %}style="background-color: #1d4ed8;"{% elif request.resolver_match.url_name == 'calculator' %}style="background-color: #ca8a04;"{% elif request.resolver_match.url_name == 'yt-downloader' %}style="background-color: #dc2626;"{% else %}style="background-color: #f97316;"{% endif %}>
+        <a href="{% url 'index' %}" title="MatetePlays' Website" class="text-5xl xl:text-7xl font-bold text-black px-16 hover:scale-110 transition-transform duration-300">MatetePlays</a>
+        <button id="toggleNavBtn" class="text-4xl font-medium text-black">
+            <img src="https://www.freeiconspng.com/uploads/white-down-arrow-png-2.png" alt="Down Arrow" width="75" height="75" class="rounded-lg border-4 border-black mr-12 hover:scale-110 transition-transform duration-300 mt-2">
+        </button>
+        <ul id="navLinks" {% if request.resolver_match.url_name == 'about' %} style="display:none; background-color: aquamarine;" class="hidden lg:flex space-x-6 px-16 bg-gradient-to-r from-blue-500 to-blue-700" {% elif request.resolver_match.url_name == 'calculator' %} style="display:none; background-color: gold;" class="hidden lg:flex space-x-6 px-16 bg-gradient-to-r from-yellow-500 to-yellow-600" {% elif request.resolver_match.url_name == 'yt-downloader' %} style="display:none; background-color: maroon;" class="hidden lg:flex space-x-6 px-16 bg-gradient-to-r from-red-500 to-red-600" {% else %} style="display:none; background-color: orange;" class="hidden lg:flex space-x-6 px-16 bg-gradient-to-r from-yellow-500 to-orange-500" {% endif %}>
+            <li class="hover:scale-110 transition-transform duration-300"><a href="{% url 'index' %}" class="text-4xl font-medium text-black ml-6">Home</a></li>
             <li class="hover:scale-110 transition-transform duration-300"><a href="{% url 'about' %}" class="text-4xl font-medium text-black">About</a></li>
             <li class="hover:scale-110 transition-transform duration-300"><a href="{% url 'calculator' %}" class="text-4xl font-medium text-black">Calculator</a></li>
             <li class="hover:scale-110 transition-transform duration-300"><a href="{% url 'yt-downloader' %}" class="text-4xl font-medium text-black">YT Downloader</a></li>
         </ul>
     </nav>
-    <div class="container mx-auto py-32 flex-grow">
+    <div id="navbarPlaceholder" style="height: 88px; display: none;"></div>
+    
+    <div class="container mx-auto pb-12 md:pb-32 flex-grow">
         {% block content %}
         {% endblock %}
     </div>
-    <footer class="footer bg-black text-white text-center py-4 rounded-t-lg mt-auto">
+    
+    <footer class="footer bg-black text-white text-center py-4 rounded-t-lg">
         <p>&copy; 2024 MatetePlays' Website. All rights reserved.</p>
         <p class="text-red-600">Disclaimer: This website and its content are for educational purposes only.</p>
     </footer>
+    <script type="text/javascript" src="{% static 'base.js' %}"></script>
 </body>
 </html>

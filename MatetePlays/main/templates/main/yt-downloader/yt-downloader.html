@@ -13,10 +13,11 @@
     <div class="max-w-3xl mx-auto flex flex-col items-center justify-center">
         <label for="video_url" class="block font-bold text-lg mb-2">Press the download button again after the progress bar reaches 100%.</label>
         <label for="video_url" class="block font-bold text-lg mb-2">Click Refresh if you want to use another format for the already once downloaded video.</label>
+        <label for="video_url" class="block font-bold text-lg mb-2">Unfortunately the given format is not always accurate for low quality videos and audios.</label>
         <label for="video_url" class="block text-4xl my-2">YouTube Video URL:</label>
         <br>
         <div class="flex items-center justify-center mb-4">
-            <input type="text" id="video_url" name="url" class="min-w-full px-4 py-2 mx-2 border rounded-md focus:outline-none focus:border-blue-500 hover:scale-105 transition-transform duration-300" required>
+            <input type="text" id="video_url" name="url" class="min-w-1/2 lg:min-w-full px-4 py-2 mx-2 border rounded-md focus:outline-none focus:border-blue-500 hover:scale-105 transition-transform duration-300" required>
             <button id="refresh_button" class="ml-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 mx-2 rounded hover:scale-110 transition-transform duration-300">Refresh</button>
         </div>
         <div class="flex items-center justify-center pt-5">
