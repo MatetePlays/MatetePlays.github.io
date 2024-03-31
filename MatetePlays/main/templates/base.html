@@ -14,17 +14,36 @@
     {% block head %}
     {% endblock %}
 </head>
-<body {% if request.resolver_match.url_name == 'about' %}style="background-color: #1d4ed8;" class="bg-gradient-to-r from-blue-500 to-blue-700"{% elif request.resolver_match.url_name == 'calculator' %}style="background-color: #ca8a04;" class="bg-gradient-to-r from-yellow-500 to-yellow-600"{% elif request.resolver_match.url_name == 'yt-downloader' %}style="background-color: #dc2626;" class="bg-gradient-to-r from-red-500 to-red-600"{% else %}style="background-color: #f97316;" class="bg-gradient-to-r from-yellow-500 to-orange-500"{% endif %} class="min-h-screen flex flex-col">
-    <nav id="navbar" class="flex items-center justify-between bg-gradient-to-r w-full z-10 backdrop-filter backdrop-blur-lg py-8" {% if request.resolver_match.url_name == 'about' %}style="background-color: #1d4ed8;"{% elif request.resolver_match.url_name == 'calculator' %}style="background-color: #ca8a04;"{% elif request.resolver_match.url_name == 'yt-downloader' %}style="background-color: #dc2626;"{% else %}style="background-color: #f97316;"{% endif %}>
-        <a href="{% url 'index' %}" title="MatetePlays' Website" class="text-5xl xl:text-7xl font-bold text-black px-16 hover:scale-110 transition-transform duration-300">MatetePlays</a>
+<body 
+    {% if request.resolver_match.url_name == 'about' %}             style="background-color: #1d4ed8;" class="min-h-screen flex flex-col bg-gradient-to-r from-blue-500 to-blue-700"
+    {% elif request.resolver_match.url_name == 'calculator' %}      style="background-color: #ca8a04;" class="min-h-screen flex flex-col bg-gradient-to-r from-yellow-500 to-yellow-600"
+    {% elif request.resolver_match.url_name == 'yt-downloader' %}   style="background-color: #dc2626;" class="min-h-screen flex flex-col bg-gradient-to-r from-red-500 to-red-600"
+    {% elif request.resolver_match.url_name == 'tt-downloader' %}   style="background-color: #7e22ce;" class="min-h-screen flex flex-col bg-gradient-to-r from-purple-500 to-purple-700"
+    {% else %}                                                      style="background-color: #f97316;" class="min-h-screen flex flex-col bg-gradient-to-r from-yellow-500 to-orange-500"
+    {% endif %}">
+    <nav id="navbar" class="flex items-center justify-between bg-gradient-to-r w-full z-10 backdrop-filter backdrop-blur-lg py-8"
+    {% if request.resolver_match.url_name == 'about' %}             style="background-color: #1d4ed8;"
+    {% elif request.resolver_match.url_name == 'calculator' %}      style="background-color: #ca8a04;"
+    {% elif request.resolver_match.url_name == 'yt-downloader' %}   style="background-color: #dc2626;"
+    {% elif request.resolver_match.url_name == 'tt-downloader' %}   style="background-color: #7e22ce;"
+    {% else %}                                                      style="background-color: #f97316;"
+    {% endif %}>
+        <a href="{% url 'index' %}" title="MatetePlays' Website" class="text-5xl xl:text-7xl font-bold text-black pl-16 hover:scale-110 transition-transform duration-300">MatetePlays</a>
         <button id="toggleNavBtn" class="text-4xl font-medium text-black">
             <img src="https://www.freeiconspng.com/uploads/white-down-arrow-png-2.png" alt="Down Arrow" width="75" height="75" class="rounded-lg border-4 border-black mr-12 hover:scale-110 transition-transform duration-300 mt-2">
         </button>
-        <ul id="navLinks" {% if request.resolver_match.url_name == 'about' %} style="display:none; background-color: aquamarine;" class="hidden lg:flex space-x-6 px-16 bg-gradient-to-r from-blue-500 to-blue-700" {% elif request.resolver_match.url_name == 'calculator' %} style="display:none; background-color: gold;" class="hidden lg:flex space-x-6 px-16 bg-gradient-to-r from-yellow-500 to-yellow-600" {% elif request.resolver_match.url_name == 'yt-downloader' %} style="display:none; background-color: maroon;" class="hidden lg:flex space-x-6 px-16 bg-gradient-to-r from-red-500 to-red-600" {% else %} style="display:none; background-color: orange;" class="hidden lg:flex space-x-6 px-16 bg-gradient-to-r from-yellow-500 to-orange-500" {% endif %}>
+        <ul id="navLinks"
+        {% if request.resolver_match.url_name == 'about' %}             style="display:none; background-color: aquamarine;" class="hidden lg:flex space-x-6 px-16 bg-gradient-to-r from-blue-500 to-blue-700"
+        {% elif request.resolver_match.url_name == 'calculator' %}      style="display:none; background-color: gold;" class="hidden lg:flex space-x-6 px-16 bg-gradient-to-r from-yellow-500 to-yellow-600"
+        {% elif request.resolver_match.url_name == 'yt-downloader' %}   style="display:none; background-color: maroon;" class="hidden lg:flex space-x-6 px-16 bg-gradient-to-r from-red-500 to-red-600"
+        {% elif request.resolver_match.url_name == 'tt-downloader' %}   style="display:none; background-color: purple;" class="hidden lg:flex space-x-6 px-16 bg-gradient-to-r from-purple-500 to-purple-700"
+        {% else %}                                                      style="display:none; background-color: orange;" class="hidden lg:flex space-x-6 px-16 bg-gradient-to-r from-yellow-500 to-orange-500"
+        {% endif %}>
             <li class="hover:scale-110 transition-transform duration-300"><a href="{% url 'index' %}" class="text-4xl font-medium text-black ml-6">Home</a></li>
             <li class="hover:scale-110 transition-transform duration-300"><a href="{% url 'about' %}" class="text-4xl font-medium text-black">About</a></li>
             <li class="hover:scale-110 transition-transform duration-300"><a href="{% url 'calculator' %}" class="text-4xl font-medium text-black">Calculator</a></li>
-            <li class="hover:scale-110 transition-transform duration-300"><a href="{% url 'yt-downloader' %}" class="text-4xl font-medium text-black">YT Downloader</a></li>
+            <li class="hover:scale-110 transition-transform duration-300"><a href="{% url 'yt-downloader' %}" class="text-4xl font-medium text-black">YouTube</a></li>
+            <li class="hover:scale-110 transition-transform duration-300"><a href="{% url 'tt-downloader' %}" class="text-4xl font-medium text-black">TikTok</a></li>
         </ul>
     </nav>
     <div id="navbarPlaceholder" style="height: 88px; display: none;"></div>

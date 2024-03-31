@@ -2,13 +2,12 @@ body {
     overflow-x: hidden;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1281px) {
     #navLinks {
         position: absolute;
         top: calc(100%);
-        left: 50%; /* Center the dropdown menu horizontally */
-        transform: translateX(-50%); /* Center the dropdown menu horizontally */
-        background: linear-gradient(to right, #eab308, #f97316); /* Gradient background */
+        right: 3rem; /* Align the dropdown menu to the right side. */
+        transform: translateX(0); /* Reset horizontal translation. */
         padding: 16px;
         border-radius: 8px;
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 1);

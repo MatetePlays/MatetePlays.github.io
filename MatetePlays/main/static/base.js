@@ -17,7 +17,7 @@ window.addEventListener('DOMContentLoaded', function() {
         document.body.offsetWidth, document.documentElement.offsetWidth,
         document.body.clientWidth, document.documentElement.clientWidth
     );
-    if (documentWidth > 1280) {
+    if (documentWidth >= 1280) {
         navLinks.style.display = 'flex';
         // If navLinks are visible, remove background color style and gradient classes.
         navLinks.style.backgroundColor = '';
@@ -50,7 +50,7 @@ window.addEventListener('resize', function() {
     );
 
     // If window width becomes larger than 1280px, remove display: none style.
-    if (documentWidth > 1280) {
+    if (documentWidth >= 1280) {
         var navLinks = document.getElementById('navLinks');
         navLinks.style.display = 'flex';
         // If navLinks are visible, remove background color style and gradient classes.

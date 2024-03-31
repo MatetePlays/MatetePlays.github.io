@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}TikTok Video Downloader - MatetePlays' Website{% endblock %}
+
+{% block content %}
+<div class="container mx-auto py-20 px-4">
+    <h1 class="text-7xl font-bold text-center mb-10">TikTok Video Downloader</h1>
+    <br>
+    <img src="https://cdn.pixabay.com/photo/2022/02/09/08/24/tiktok-7002866_1280.png" alt="Error" width="250" height="250" class="mx-auto block rounded-3xl border-4 border-black hover:scale-110 transition-transform duration-300">
+    <br>
+    <noscript><h2 class="text-5xl font-bold text-center mb-16 mt-4">Please enable JavaScript to use the TikTok Downloader.</h2></noscript>
+    <br>
+    <div class="max-w-3xl mx-auto flex flex-col items-center justify-center">
+        <h1 class="text-8xl text-red-700 font-bold text-center mb-10">Coming Soon!</h1>
+        <script type="text/javascript" src="{% static 'main/tt-downloader/tt-downloader.js' %}"></script>
+    </div>
+</div>
+{% endblock %}

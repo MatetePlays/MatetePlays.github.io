@@ -44,3 +44,6 @@ def calculator(request):
 
 def yt_downloader(request):
     return render(request, "main/yt-downloader/yt-downloader.html", {})
+
+def tt_downloader(request):
+    return render(request, "main/tt-downloader/tt-downloader.html", {})
