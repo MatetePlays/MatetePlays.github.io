@@ -7,6 +7,7 @@
     <meta charset="UTF-8">
     <meta name="keywords" content="MatetePlays, Matete Plays, Random, Website, GitHub, Python, HTML, CSS, JavaScript">
     <meta name="description" content="This is MatetePlays' personal website.">
+    <meta name='viewport' content='width=device-width'>
     <link rel="icon" href="https://avatars.githubusercontent.com/u/81098784?v=4" type="image/x-icon">
     {% tailwind_css %}
     <link rel="stylesheet" href="{% static 'base.css' %}">
@@ -27,7 +28,7 @@
         </ul>
     </nav>
     <div id="navbarPlaceholder" style="height: 88px; display: none;"></div>
-    
+    <noscript><p class="text-5xl text-red-600 text-center my-12">JavaScript is needed for website to function properly.</p></noscript>
     <div class="container mx-auto pb-12 md:pb-32 flex-grow">
         {% block content %}
         {% endblock %}
